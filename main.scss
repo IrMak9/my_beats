@@ -141,7 +141,9 @@ section {
         }
     }
 }
-
+.main__cont {
+    display: inline-flex;
+}
 .main__character {
     display: inline-flex;
     margin-top: 88px;
@@ -160,7 +162,7 @@ section {
     background-color: white;
 
 }
-.why__why {
+.why__question {
     display: flex;
     flex-direction: column;
 }
@@ -253,22 +255,22 @@ section {
     width: 100%;
 }
 .rewiews__content {
+    display: flex;
     flex: 1;
-    margin-left: 40px;
+    margin-left: 5%;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .rewiews__title {
     font-size: 24px;
     font-weight: 700;
-    margin-top: 32px;
 }
 .rewiews__text {
     color: #666666;
-    margin-top: 27px;
 }
 .rewiews__autor {
     font-size: 18px;
     font-weight: 700;
-    margin-top: 38px;
 }
 .interactive-avatar {
  height: 75px;
@@ -297,12 +299,16 @@ section {
     width: 100%;
 }
 .rewiews__swircher {
-    display: inline-flex;
+    display: flex;
     margin-top: 15px;
-    margin-left: 40%;
+    justify-content: center;
+
 }
 .rerewiews__swircher-item {
     margin-left: 6px;
+    &:first-child {
+        margin-left: 0px;
+    }
 }
 .form {
     background-color:  #181818;
@@ -324,6 +330,10 @@ section {
 .form__row {
     display: flex;
     margin-bottom: 36px;
+    &:last-child {
+        margin-bottom: 0px;
+
+    }
 }
 .form__block {
     flex: 1;
@@ -446,4 +456,7 @@ $z-fixed-menu: 100;
         border: 1px solid red;
         border-radius: 50%;
     }
+}
+.form__btns {
+    margin-top: 26px;
 }
