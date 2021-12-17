@@ -30,7 +30,7 @@ body {
 .container {
   width: 95%;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: auto;
   position: relative;
 }
 
@@ -63,7 +63,6 @@ img {
 }
 
 .hero {
-  min-height: 40.75rem;
   background: url(pic/beat.png) left 78% center no-repeat;
 }
 @media screen and (max-width: 768px) {
@@ -90,6 +89,11 @@ img {
   }
 }
 
+.header__logo-pic {
+  height: 40px;
+  width: 40px;
+}
+
 .header__logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,7 +105,7 @@ img {
 }
 
 section {
-  min-height: 40.625rem;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,9 +200,23 @@ section {
 }
 
 .hamburger {
+  z-index: 1000;
+  position: fixed;
+  top: 2.5rem;
+  right: 3%;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.hamburger__link {
   width: 24px;
   height: 20px;
-  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -206,13 +224,9 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-@media screen and (max-width: 768px) {
-  .hamburger {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-  }
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .hamburger__plank {
@@ -277,6 +291,8 @@ section {
   .main__title {
     margin-top: 3.0625rem;
     font-size: 2rem;
+    padding-left: 15%;
+    padding-right: 15%;
   }
 }
 
@@ -412,6 +428,7 @@ section {
 }
 @media screen and (max-width: 480px) {
   .why__reason {
+    margin-top: 1.375rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -456,9 +473,6 @@ section {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .why__container:first-child {
-    margin-top: 3.3125rem;
   }
 }
 
@@ -1133,6 +1147,9 @@ section {
 
 .footer__item {
   margin-left: 0.625rem;
+}
+.footer__item:first-child {
+  margin-left: 0rem;
 }
 @media screen and (max-width: 480px) {
   .footer__item {
